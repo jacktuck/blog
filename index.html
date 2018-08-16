@@ -1,1 +1,118 @@
-Hello World
+<html>
+  <body>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Proxima Nova:400,700" rel="stylesheet">
+    </head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Proxima Nova', monospace
+      }
+      .profile {
+        display: flex;
+      }
+      .profile__head, .profile__body {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+      .profile__head {
+        width: 60%;
+        height: 100%;
+      }
+      p {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p, h1, h2 {
+        padding: 0 50px 25px 50px;
+      }
+      .profile__img {
+        background-image: url('https://m.aceshowbiz.com/images/wennpic/wenn3222418.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100%;
+      }
+      .profile__body {
+        padding: 100px 0;
+        width: 40%;
+        text-align: center;
+      }
+      .profile__links {
+        margin: 0;
+      }
+      .btn {
+        display: inline-block;
+      }
+
+      @media (max-width: 1024px) {
+        h1, h2 {
+          padding-bottom: 5px;
+        }
+        .profile__links {
+          padding: 40px 50px 20px 50px;
+        }
+        p {
+          padding: 40px 50px 0 50px;
+          font-size: 16px;
+        }
+        h1 {
+          font-size: 20px;
+        }
+        .profile__body {
+          position: relative;
+          padding: 0;
+        }
+        .profile__headline {
+          text-shadow: 1px 1px 1px rgba(0,0,0,.7);
+          position: absolute;
+          color: #fff;
+          top: -80px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+        .profile {
+          display: block;
+        }
+        .profile__body {
+          width: 100%;
+        }
+        .profile__head {
+          width: 100%;
+          height: 500px;
+        }
+        
+      }
+    </style>
+
+    <div class='profile'>
+      <div class='profile__head'>
+        <div class='profile__img'></div>
+      </div>
+    
+      <div class='profile__body'>
+        <div class='profile__headline'>
+          <h1>JACK TUCK</h1>
+          <h2>Software Engineer working in London</h2>
+        </div>
+        <p>Self taught software engineer with 3 years’ experience in a fast-paced startup environment. Writes Javascript and Go. Currently learning Go and Rust. Interested in Open Source, Decentralization, and Cryptocurrency.</p>
+        <p>jt(at)jtuck(dot)io</p>
+        <div class="profile__links">
+          <a href='https://github.com/jacktuck'><img width=25 height=25 src='./github.svg'></a>
+          <a href='https://stackoverflow.com/users/2784487/jack-tuck'><img width=25 height=25 src='./stackoverflow.svg'></a>
+          <a href='https://www.linkedin.com/in/jacktuck/'><img width=25 height=25 src='./linkedin.svg'></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
