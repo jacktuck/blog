@@ -6,6 +6,10 @@ import './Post.css'
 const Post = (params) => {
   console.log('POST->', params);
 
+
+
+  
+
   const [hasError, setErrors] = useState(false);
   const [post, setPost] = useState({});
   const [isLoading, setIsLoading] = useState(true);

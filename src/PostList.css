@@ -1,6 +1,8 @@
 #posts {
   list-style: none;
   padding: 0 20px;
+  width: 80%;
+  display: inline-block;
 }
 
 #pub, #title {
