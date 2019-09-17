@@ -11,8 +11,8 @@ const Post = (params) => {
 
   return (
     <div>
-      <div id="createdDate">{pub}</div>
-      <h1><Link to={`blog/${params.item.fields.slug}`}>{params.item.fields.title}</Link></h1>
+      <h1 id="title"><Link to={`/post/${params.item.fields.slug}`}>{params.item.fields.title}</Link></h1>
+      <div id="pub">{pub}</div>
     </div>
   );
 };

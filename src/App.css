@@ -2,3 +2,12 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+#header {
+  display: inline-block;
+}
+
+#page {
+  width: 70%;
+  display: inline-block;
+}

@@ -1,17 +1,28 @@
 #posts {
   list-style: none;
-
+  padding: 0 20px;
 }
 
-#createdDate {
-  color: #bbb;
-  text-align: right;
+#pub, #title {
+  line-height: 100px;
+  display: inline-block;
+  margin: 0;
+}
+
+#pub {
+  float: right;
   font-weight: bold;
 }
 
 #posts li {
+  font-size: 14px;
   position: relative;
-  padding: 10px;
+  height: 100px;
+  padding: 0 20px;
+}
+
+#posts li:hover {
+  /* background: #fff6e5; */
 }
 
 #posts li:not(:last-child):after {
@@ -21,6 +32,6 @@
   left: 0;
   right: 0;
   height: 1px;
-  border-top: 1px dotted #ccc;
   z-index: -1;
+  border-top: 1px solid #e1e1e1;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PostListItem from './PostListItem';
 import './PostList.css'
+import NotFound from "./NotFound";
 
 function PostListComponent (props) {
   console.log('PROPS', props)
