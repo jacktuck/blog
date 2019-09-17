@@ -1,0 +1,26 @@
+#posts {
+  list-style: none;
+
+}
+
+#createdDate {
+  color: #bbb;
+  text-align: right;
+  font-weight: bold;
+}
+
+#posts li {
+  position: relative;
+  padding: 10px;
+}
+
+#posts li:not(:last-child):after {
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px dotted #ccc;
+  z-index: -1;
+}
