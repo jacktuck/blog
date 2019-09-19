@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from "react";
-import PostListItem from './PostListItem';
 import './PostList.css'
-import NotFound from "./NotFound";
+import { Link } from "react-router-dom";
+
+const PostListItem = (params) => {
+  let pub = new Date(params.item.sys.createdAt).toLocaleDateString('en', {
+    day: 'numeric',
+    month: 'short', 
+    year: 'numeric'
+  })
+
+  return (
+    <div>
+      <h1 id="title"><Link to={`/post/${params.item.fields.slug}`}>{params.item.fields.title}</Link></h1>
+      <div id="pub">{pub}</div>
+    </div>
+  );
+};
 
 function PostListComponent (props) {
-  console.log('PROPS', props)
   if (!props.posts.items) return <div/>
 
   const postItems = props.posts.items.map((post) =>
     <li key={post.sys.id}><PostListItem item={post}/></li>
   )
-
-  console.log('postItems', postItems)
 
   return (
     <ul id="posts">
@@ -48,4 +59,5 @@ const PostList = () => {
 
   return (<PostListComponent posts={posts}/>)
 };
+
 export default PostList;

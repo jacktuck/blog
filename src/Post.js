@@ -2,14 +2,9 @@ import React, { useState, useEffect } from "react";
 import ReactMarkdown from 'react-markdown';
 import NotFound from "./NotFound";
 import './Post.css'
+import CodeBlock from './CodeBlock'
 
 const Post = (params) => {
-  console.log('POST->', params);
-
-
-
-  
-
   const [hasError, setErrors] = useState(false);
   const [post, setPost] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -42,8 +37,6 @@ const Post = (params) => {
 
         setPost(item.fields)
         document.title = `${item.fields.title} — jtuck.io`
-
-        console.log('ITEM', res.items[0])
       })
       .catch(err => setErrors(err));
   }
@@ -62,7 +55,10 @@ const Post = (params) => {
             <div id="post">
               <h1>{post.title}</h1>
               <p>Published {post.pub}</p>
-              <p><ReactMarkdown source={post.content} /></p>
+              <p>
+
+              <ReactMarkdown source={post.content} renderers={{ code: CodeBlock }}/>  
+              </p>  
             </div>
           </div>
         ) : (<NotFound/>)

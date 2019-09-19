@@ -10,7 +10,7 @@ function AppRouter() {
   return (
     <Router>
       <div id="container">
-        <div id="header">
+        <div id="sidenav">
           <Nav/>
         </div>
 
