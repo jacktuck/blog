@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './PostList.css'
+import './PostList.scss'
 import { Link } from "react-router-dom";
 
 const PostListItem = (params) => {

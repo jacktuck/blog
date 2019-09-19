@@ -1,6 +1,10 @@
 #posts {
   list-style: none;
   padding: 0;
+
+  a, a:visited, a:hover, a:active {
+    color: #444;
+  }  
 }
 
 #pub, #title {

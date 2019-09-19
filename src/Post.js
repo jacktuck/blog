@@ -17,7 +17,7 @@ const Post = (params) => {
       order: '-sys.createdAt',
       select: 'fields.title,fields.content,sys.createdAt',
       content_type: 'post',
-      'fields.slug[in]': params.match.params.slug
+      'fields.slug': params.match.params.slug
     })
 
     const res = await fetch(url);
@@ -45,25 +45,23 @@ const Post = (params) => {
     fetchData();
   }, []);
 
+  if (isLoading) return <div/>;
+
+  if (!post.title) return <NotFound/>
+
   return (
     <div>
-    {
-      isLoading ? <div/> : post.title ?
-        (
-          <div>
-            <p id="backBtn"><a href="/">← back to list</a></p>
-            <div id="post">
-              <h1>{post.title}</h1>
-              <p>Published {post.pub}</p>
-              <p>
+      <p id="backBtn"><a href="/">← back to list</a></p>
+      <div id="post">
+        <h1>{post.title}</h1>
+        <p>Published {post.pub}</p>
+        <p>
 
-              <ReactMarkdown source={post.content} renderers={{ code: CodeBlock }}/>  
-              </p>  
-            </div>
-          </div>
-        ) : (<NotFound/>)
-    }
+        <ReactMarkdown source={post.content} renderers={{ code: CodeBlock }}/>  
+        </p>  
+      </div>
     </div>
   )
 };
+
 export default Post;
