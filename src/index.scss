@@ -3,6 +3,7 @@
 }
 
 body {
+  background: #fff;
   color: #444;
   margin: 0;
   min-height: 100vh;
@@ -33,8 +34,8 @@ pre {
 }
 
 p > code, li > code {
-  background: lightgrey;
-  color: white;
+  background: #9A9A9A;
+  color: #fff;
   padding: 2px;
 }
 

@@ -11,8 +11,8 @@ const PostListItem = (params) => {
 
   return (
     <div>
-      <h1 id="title"><Link to={`/post/${params.item.fields.slug}`}>{params.item.fields.title}</Link></h1>
       <div id="pub">{pub}</div>
+      <h1 id="title"><Link to={`/${params.item.fields.slug}`}>{params.item.fields.title}</Link></h1>
     </div>
   );
 };

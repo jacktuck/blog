@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import './App.css'
+import './App.scss'
 import Nav from './Nav'
 import Post from './Post'
 import PostList from './PostList'
@@ -17,7 +17,7 @@ function AppRouter() {
         <div id="page">
           <Switch>
             <Route path="/" exact component={PostList} />
-            <Route path="/post/:slug" component={Post} />
+            <Route path="/:slug" component={Post} />
             <Route component={NotFound} />
           </Switch>
         </div>
