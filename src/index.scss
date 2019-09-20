@@ -4,22 +4,16 @@
 
 body {
   background: #fff;
-  color: #444;
+  color: #000;
   margin: 0;
   min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-seri;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a, a:visited, a:hover, a:active {
   color: #3574d4;
   text-decoration: none;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 img {
@@ -34,9 +28,11 @@ pre {
 }
 
 p > code, li > code {
+  font-size: .8rem;
   border: 1px solid #dee2e6;
-  padding: 0px 10px;
+  padding: 2px 10px;
   border-radius: 3px;
+  font-weight: bold;
 }
 
 li {
