@@ -11,7 +11,6 @@ function Nav() {
         <li><a href="https://github.com/jacktuck">GitHub</a></li>
         <li><a href="https://stackoverflow.com/users/2784487/jack-tuck">StackOverflow</a></li>
         <li><a href="https://twitter.com/jack_tuck">Twitter</a></li>
-        <li><a href="https://drive.google.com/open?id=1-JbIMOg6JZUCCjbI_iBqgyH5r4PnRFZg">CV</a></li>
       </ul>
     </div>
   )
